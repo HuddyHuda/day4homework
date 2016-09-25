@@ -2,7 +2,7 @@
 //http://jsbin.com/roseboguyu/edit?js,console
 
 
-function long1(arrayofstring){
+function lengths(arrayofstring){
 
  console.log(arrayofstring.length);
 
@@ -25,9 +25,9 @@ function long1(arrayofstring){
 
 
 var words = ["hello", "what", "is", "up", "dude"]
-long1(words);
+lengths(words);
 
-console.log(long1(words));
+console.log(lengths(words));
 
 //END OF LONG 1
 
@@ -35,7 +35,7 @@ console.log(long1(words));
 //START OF LONG 2
 //http://jsbin.com/cebobikozu/edit?js,console
 
-function long2(num1,num2,num3){
+function transmogrifier(num1,num2,num3){
 
   var totalfirstsecond = num1 * num2;
 
@@ -47,9 +47,9 @@ function long2(num1,num2,num3){
 
 }
 
-long2(5, 4, 3);
-long2(13, 12, 5);
-long2(42, 13, 7);
+transmogrifier(5, 4, 3);
+transmogrifier(13, 12, 5);
+transmogrifier(42, 13, 7);
 
 
 //START OF LONG 3
@@ -91,7 +91,7 @@ wordReverse2(words2);
 
 //START OF SHORT 1
 
-function short1(num1,num2){
+function maxOfTwoNumbers(num1,num2){
 
   if (num1 > num2){
 
@@ -108,7 +108,7 @@ function short1(num1,num2){
 
 //example
 
-console.log (short1(2,9));
+console.log (maxOfTwoNumbers(2,9));
 //END OF SHORT 1
 
 //START OF SHORT 4
@@ -165,12 +165,12 @@ sumArray(numbers);
 
 //start of short 5
 
-var short5 = function () {
+var numberOfArguments = function () {
  return arguments.length
 }
 
-console.log(short5("ironman"));
-console.log(short5("ironman","pikachu"));
+console.log(numberOfArguments("ironman"));
+console.log(numberOfArguments("ironman","pikachu"));
 
 
 //end of short 5
@@ -179,7 +179,7 @@ console.log(short5("ironman","pikachu"));
 //start of short6
 
 
-function short6(stringofwords){
+function reverseString(stringofwords){
 
   var str = stringofwords;
 
@@ -190,14 +190,14 @@ var splitted1 = (str.split("").reverse().join(""));
 }
 
 var words = "jag testar";
-short6(words);
+reverseString(words);
 
 //endofshort6
 
 
 //start of short7
 
-function short7(str) {
+function findLongestWord(str) {
   var words = str.split(' ');
   var longestLength = 0;
   var longestWord;
@@ -210,12 +210,22 @@ function short7(str) {
   return longestWord;
 }
 
-console.log(short7('The quick brown fox jumped over the lazy dog'));
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
 
 
 //endofshort7
 
 
 //start of short8
+function filterLongWord (array, int) {
+ var longWord = []
+ for (var i = 0; i < array.length; i++) {
+   if (array[i].length > int) {
+     longWord.push(array[i])
+   }
+ }
+ return longWord
+}
+console.log(filterLongWord(['HappyBirthday', 'Freedom', 'Responsibility', 'Freeze', 'Fame'], 5))
 
 //endofshort8
