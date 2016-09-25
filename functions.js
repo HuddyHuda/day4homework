@@ -2,7 +2,7 @@
 //http://jsbin.com/roseboguyu/edit?js,console
 
 
-function lengths(arrayofstring){
+function long1(arrayofstring){
 
  console.log(arrayofstring.length);
 
@@ -25,9 +25,9 @@ function lengths(arrayofstring){
 
 
 var words = ["hello", "what", "is", "up", "dude"]
-lengths(words);
+long1(words);
 
-console.log(lengths(words));
+console.log(long1(words));
 
 //END OF LONG 1
 
@@ -35,7 +35,7 @@ console.log(lengths(words));
 //START OF LONG 2
 //http://jsbin.com/cebobikozu/edit?js,console
 
-function transmogrifier(num1,num2,num3){
+function long2(num1,num2,num3){
 
   var totalfirstsecond = num1 * num2;
 
@@ -47,9 +47,9 @@ function transmogrifier(num1,num2,num3){
 
 }
 
-transmogrifier(5, 4, 3);
-transmogrifier(13, 12, 5);
-transmogrifier(42, 13, 7);
+long2(5, 4, 3);
+long2(13, 12, 5);
+long2(42, 13, 7);
 
 
 //START OF LONG 3
@@ -91,7 +91,7 @@ wordReverse2(words2);
 
 //START OF SHORT 1
 
-function maxOfTwoNumbers(num1,num2){
+function short1(num1,num2){
 
   if (num1 > num2){
 
@@ -108,7 +108,7 @@ function maxOfTwoNumbers(num1,num2){
 
 //example
 
-console.log (maxOfTwoNumbers(2,9));
+console.log (short1(2,9));
 //END OF SHORT 1
 
 //START OF SHORT 4
@@ -165,11 +165,13 @@ sumArray(numbers);
 
 //start of short 5
 
-function myFunction(p1, p2) {
-    return p1 * p2;
+var short5 = function () {
+ return arguments.length
 }
 
-console.log(myFunction(4,2));
+console.log(short5("ironman"));
+console.log(short5("ironman","pikachu"));
+
 
 //end of short 5
 
@@ -177,7 +179,7 @@ console.log(myFunction(4,2));
 //start of short6
 
 
-function reverseString(stringofwords){
+function short6(stringofwords){
 
   var str = stringofwords;
 
@@ -188,6 +190,32 @@ var splitted1 = (str.split("").reverse().join(""));
 }
 
 var words = "jag testar";
-reverseString(words);
+short6(words);
 
 //endofshort6
+
+
+//start of short7
+
+function short7(str) {
+  var words = str.split(' ');
+  var longestLength = 0;
+  var longestWord;
+  for (var i=0;i<words.length;i++) {
+    if (words[i].length > longestLength) {
+       longestLength = words[i].length;
+       longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+
+console.log(short7('The quick brown fox jumped over the lazy dog'));
+
+
+//endofshort7
+
+
+//start of short8
+
+//endofshort8
